@@ -32,5 +32,9 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-plugin-react": "^7.21.5"
   }
 }
