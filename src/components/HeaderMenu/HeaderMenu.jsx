@@ -5,6 +5,7 @@ import {
   Heading,
   IconButton,
   Divider,
+  VStack,
   Link,
   Drawer,
   DrawerBody,
@@ -17,27 +18,20 @@ import { getMenu } from "../../queries/menu";
 
 export const HeaderMenu = () => {
   const menuData = getMenu();
-
   const btnRef = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const icon = <FontAwesomeIcon size="1x" icon={["fa", "bars"]} />;
 
   const menuItems = menuData.menuItems.nodes.map((menu, index) => {
     return (
-      <>
-        <Link
-          key={`headerMenu${index}`}
-          href={menu.path}
-          isExternal={!!menu.target}
-        >
+      <VStack align="stretch" key={`headerMenu${index}`}>
+        <Link href={menu.path} isExternal={!!menu.target}>
           {menu.label}
         </Link>
         <Divider mb="3" />
-      </>
+      </VStack>
     );
   });
-
-  console.log(menuData.menuItems.nodes);
 
   return (
     <>
