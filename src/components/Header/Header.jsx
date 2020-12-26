@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <Container maxW="5xl">
+      <Container maxW="7xl">
         <Flex align="center" justify="space-between">
           <Heading>{title}</Heading>
           <HeaderMenu></HeaderMenu>
