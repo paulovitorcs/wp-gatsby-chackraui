@@ -17,7 +17,7 @@ import {
 import { getMenu } from "../../queries/menu";
 
 export const HeaderMenu = () => {
-  const menuData = getMenu("Menu");
+  const menuData = getMenu();
   const btnRef = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const icon = <FontAwesomeIcon size="1x" icon={["fa", "bars"]} />;
