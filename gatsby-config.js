@@ -6,7 +6,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress-experimental",
       options: {
-        url: "http://wp.paulovitorcs.com/graphql/",
+        url: "http://wp.paulovitorcs.com/wp/graphql",
       },
     },
     "gatsby-plugin-styled-components",
