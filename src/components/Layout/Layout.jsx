@@ -4,6 +4,7 @@ import { ChakraProvider, Container } from "@chakra-ui/react";
 import GoogleFontLoader from "react-google-font-loader";
 import theme from "../../../assets/theme";
 import fonts from "../../../assets/fonts";
+import Header from "../Header";
 
 const Layout = (props) => {
   const { children } = props;
@@ -11,6 +12,7 @@ const Layout = (props) => {
   return (
     <ChakraProvider theme={theme}>
       <GoogleFontLoader fonts={fonts} />
+      <Header />
       <main>
         <Container>{children}</Container>
       </main>

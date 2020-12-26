@@ -1,6 +1,11 @@
 import { extendTheme } from "@chakra-ui/react";
+import { primary } from "./colors";
 
 const theme = extendTheme({
+  colors: {
+    brand: primary
+  },
+
   fonts: {
     body: "Darker Grotesque",
     heading: "Bree Serif"
@@ -9,7 +14,7 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: "gray.100",
+        bg: "white",
         fontSize: "xl",
         fontWeight: "medium"
       },
