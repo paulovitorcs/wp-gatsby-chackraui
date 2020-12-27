@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { getMenu } from "../../queries/menu";
 
-export const HeaderMenu = () => {
+const HeaderMenu = () => {
   const menuData = getMenu();
   const btnRef = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -63,3 +63,5 @@ export const HeaderMenu = () => {
     </>
   );
 };
+
+export default HeaderMenu;
