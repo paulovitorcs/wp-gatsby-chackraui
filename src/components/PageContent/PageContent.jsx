@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactHtmlParser from "react-html-parser";
-import { Wrap, Box, Heading } from "@chakra-ui/react";
+import { Wrap, Box, Heading, Image } from "@chakra-ui/react";
 
 const PageContent = (props) => {
   const { title, content } = props;
@@ -9,7 +9,7 @@ const PageContent = (props) => {
   return (
     <Wrap>
       <Box w="100%">
-        <Heading as="h1" mb="3">
+        <Heading as="h1" mb="3" size="3xl">
           {title}
         </Heading>
       </Box>
