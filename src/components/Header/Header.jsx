@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Heading, Flex } from "@chakra-ui/react";
 import { StyledHeader } from "./Header.styles";
-import { getBasicWpInfo } from "../../queries/wp";
 import HeaderMenu from "../HeaderMenu";
+import { useWpBasicInfo } from "../../hooks/wp";
 
 const Header = () => {
-  const {title} = getBasicWpInfo();
+  const {title} = useWpBasicInfo();
 
   return (
     <StyledHeader>

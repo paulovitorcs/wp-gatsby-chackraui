@@ -1,10 +1,10 @@
 import { Heading, VStack, Wrap } from "@chakra-ui/react";
 import React from "react";
-import { getLatestPosts } from "../../queries/posts";
+import { useLatestPosts } from "../../hooks/post";
 import PostItem from "../PostItem";
 
 const LatestPosts = () => {
-  const latestPostsData = getLatestPosts();
+  const latestPostsData = useLatestPosts();
 
   const postsList = latestPostsData.map((post, index) => {
     return (

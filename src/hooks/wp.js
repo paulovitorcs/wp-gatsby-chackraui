@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 
-export const getBasicWpInfo = () => {
+export const useWpBasicInfo = () => {
   const data = useStaticQuery(
     graphql`
       query {

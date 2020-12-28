@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 
-export const getFrontPage = () => {
+export const useWpFrontPage = () => {
   const data = useStaticQuery(
     graphql`
       query {

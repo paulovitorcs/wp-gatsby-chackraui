@@ -20,16 +20,16 @@ const PostItem = (props) => {
 
   return (
     <StyledPostItem>
-      <Link to={`/${slug}/`}>
+      <Link to={`/post/${slug}/`}>
         {imageDisplay}
         <Box w="100%" mb="3">
           <Heading size="lg">{title}</Heading>
         </Box>
-        <Box w="100%" mb="3">{ReactHtmlParser(excerpt)}</Box>
+        <Box w="100%" mb="3">
+          {ReactHtmlParser(excerpt)}
+        </Box>
         <Box w="100%" textAlign="right">
-          <Link to={`/${slug}`}>
-            <Heading size="sm">Read More</Heading>
-          </Link>
+          <Heading size="sm">Read More</Heading>
         </Box>
       </Link>
     </StyledPostItem>

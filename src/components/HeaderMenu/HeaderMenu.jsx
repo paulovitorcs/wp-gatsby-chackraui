@@ -14,10 +14,10 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from "@chakra-ui/react";
-import { getMenu } from "../../queries/menu";
+import { useWpMenu } from "../../hooks/menu";
 
 const HeaderMenu = () => {
-  const menuData = getMenu();
+  const menuData = useWpMenu();
   const btnRef = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const icon = <FontAwesomeIcon size="1x" icon={["fa", "bars"]} />;

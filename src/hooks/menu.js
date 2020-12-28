@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 
-export const getMenu = () => {
+export const useWpMenu = () => {
   const data = useStaticQuery(
     graphql`
       query {

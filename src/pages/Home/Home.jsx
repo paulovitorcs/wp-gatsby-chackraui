@@ -3,10 +3,10 @@ import React from "react";
 import LatestPosts from "../../components/LatestPosts";
 import Layout from "../../components/Layout";
 import PageContent from "../../components/PageContent";
-import {getFrontPage} from "../../queries/pages";
+import { useWpFrontPage } from "../../hooks/page";
 
 const Home = () => {
-  const frontPageData = getFrontPage();
+  const frontPageData = useWpFrontPage();
 
   return (
     <Layout>
