@@ -14,8 +14,8 @@ const Home = () => {
         title={frontPageData.title}
         content={frontPageData.content}
       />
-      <Divider my="5" />
       <Container>
+        <Divider my="5" />
         <LatestPosts />
       </Container>
     </Layout>

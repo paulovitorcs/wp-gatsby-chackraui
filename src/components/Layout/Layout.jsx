@@ -7,6 +7,7 @@ import GoogleFontLoader from "react-google-font-loader";
 import theme from "../../../assets/theme";
 import fonts from "../../../assets/fonts";
 import Header from "../Header";
+import Footer from "../Footer";
 
 library.add(fas);
 
@@ -20,6 +21,7 @@ const Layout = (props) => {
       <main>
         <Box mb="100px">{children}</Box>
       </main>
+      <Footer />
     </ChakraProvider>
   );
 };

@@ -1,14 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import moment from "moment";
-import { Box, Container, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import { Container, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContentHeader = (props) => {
   const { title, author, date, featuredImage } = props;
   const formatedDate = moment(date).format("DD/MM/YYYY");
-
-  console.log(featuredImage);
 
   const imageDisplay = featuredImage ? <Image my="10" objectFit="cover" src={featuredImage.node.sourceUrl} alt={featuredImage.node.altText} /> : null;
 
