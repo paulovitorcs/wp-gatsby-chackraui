@@ -3,15 +3,18 @@ import { Container, Heading, Flex } from "@chakra-ui/react";
 import { StyledHeader } from "./Header.styles";
 import HeaderMenu from "../HeaderMenu";
 import { useWpBasicInfo } from "../../static-queries/wp";
+import { Link } from "gatsby";
 
 const Header = () => {
-  const {title} = useWpBasicInfo();
+  const { title } = useWpBasicInfo();
 
   return (
     <StyledHeader>
       <Container maxW="7xl">
         <Flex align="center" justify="space-between">
-          <Heading>{title}</Heading>
+          <Link to="/">
+            <Heading>{title}</Heading>
+          </Link>
           <HeaderMenu></HeaderMenu>
         </Flex>
       </Container>

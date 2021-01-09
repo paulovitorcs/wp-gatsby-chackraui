@@ -1,6 +1,6 @@
-import { Heading } from "@chakra-ui/react";
 import React from "react";
 import Layout from "../../components/Layout";
+import PostContent from "../../components/PostContent/PostContent";
 
 const SinglePost = (props) => {
   const { pageContext } = props;
@@ -8,7 +8,13 @@ const SinglePost = (props) => {
 
   return (
     <Layout>
-      <Heading>{title}</Heading>
+      <PostContent
+        title={title}
+        content={content}
+        author={author}
+        date={date}
+        featuredImage={featuredImage}
+      />
     </Layout>
   );
 };

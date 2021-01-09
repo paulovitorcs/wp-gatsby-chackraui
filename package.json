@@ -35,6 +35,7 @@
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-source-wordpress-experimental": "^6.0.0",
     "gatsby-transformer-sharp": "^2.9.0",
+    "moment": "^2.29.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-google-font-loader": "^1.1.0",

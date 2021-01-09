@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import { ChakraProvider, Container } from "@chakra-ui/react";
+import { Box, ChakraProvider, Container } from "@chakra-ui/react";
 import GoogleFontLoader from "react-google-font-loader";
 import theme from "../../../assets/theme";
 import fonts from "../../../assets/fonts";
@@ -18,7 +18,7 @@ const Layout = (props) => {
       <GoogleFontLoader fonts={fonts} />
       <Header />
       <main>
-        <Container mb="100px">{children}</Container>
+        <Box mb="100px">{children}</Box>
       </main>
     </ChakraProvider>
   );

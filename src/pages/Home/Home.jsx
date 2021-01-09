@@ -1,4 +1,4 @@
-import { Divider } from "@chakra-ui/react";
+import { Container, Divider } from "@chakra-ui/react";
 import React from "react";
 import LatestPosts from "../../components/LatestPosts";
 import Layout from "../../components/Layout";
@@ -10,9 +10,14 @@ const Home = () => {
 
   return (
     <Layout>
-      <PageContent title={frontPageData.title} content={frontPageData.content} />
-      <Divider my="5"/>
-      <LatestPosts />
+      <PageContent
+        title={frontPageData.title}
+        content={frontPageData.content}
+      />
+      <Divider my="5" />
+      <Container>
+        <LatestPosts />
+      </Container>
     </Layout>
   );
 };
