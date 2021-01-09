@@ -3,7 +3,7 @@ import React from "react";
 import LatestPosts from "../../components/LatestPosts";
 import Layout from "../../components/Layout";
 import PageContent from "../../components/PageContent";
-import { useWpFrontPage } from "../../hooks/page";
+import { useWpFrontPage } from "../../static-queries/page";
 
 const Home = () => {
   const frontPageData = useWpFrontPage();

@@ -14,7 +14,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from "@chakra-ui/react";
-import { useWpMenu } from "../../hooks/menu";
+import { useWpMenu } from "../../static-queries/menu";
 
 const HeaderMenu = () => {
   const menuData = useWpMenu();

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Heading, Flex } from "@chakra-ui/react";
 import { StyledHeader } from "./Header.styles";
 import HeaderMenu from "../HeaderMenu";
-import { useWpBasicInfo } from "../../hooks/wp";
+import { useWpBasicInfo } from "../../static-queries/wp";
 
 const Header = () => {
   const {title} = useWpBasicInfo();
