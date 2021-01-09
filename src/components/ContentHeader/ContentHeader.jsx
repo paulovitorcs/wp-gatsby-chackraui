@@ -10,7 +10,7 @@ const ContentHeader = (props) => {
 
   console.log(featuredImage);
 
-  const imageDisplay = featuredImage ? <Image mt="10" objectFit="cover" src={featuredImage.node.sourceUrl} alt={featuredImage.node.altText} /> : null;
+  const imageDisplay = featuredImage ? <Image my="10" objectFit="cover" src={featuredImage.node.sourceUrl} alt={featuredImage.node.altText} /> : null;
 
   const authorDisplay = author ? (
     <Flex align="center">
@@ -31,7 +31,7 @@ const ContentHeader = (props) => {
   ) : null;
 
   return (
-    <Container maxW="5xl" mb="10">
+    <Container maxW="5xl">
       <HStack mb="2" spacing="10" justify="center">
         {authorDisplay}
         {dateDisplay}
