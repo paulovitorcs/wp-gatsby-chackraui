@@ -12,15 +12,15 @@ const Footer = () => {
             @paulovitorcs
           </a>
           , using{" "}
-          <a href="" target="blank">
+          <a href="https://wordpress.org/" target="blank">
             Wordpress
           </a>
           ,{" "}
-          <a href="" target="blank">
+          <a href="https://www.gatsbyjs.org/" target="blank">
             Gatsby{" "}
           </a>
           and{" "}
-          <a href="" target="blank">
+          <a href="https://chakra-ui.com/" target="blank">
             Chackra UI
           </a>
         </Text>
