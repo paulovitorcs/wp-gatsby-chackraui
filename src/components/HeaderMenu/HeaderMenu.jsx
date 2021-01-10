@@ -18,11 +18,16 @@ import { useWpMenu } from "../../static-queries/menu";
 
 const HeaderMenu = () => {
   const menuData = useWpMenu();
+
+  if (!menuData) {
+    return null;
+  }
+
   const btnRef = useRef();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const icon = <FontAwesomeIcon size="1x" icon={["fa", "bars"]} />;
 
-  const menuItems = menuData.menuItems.nodes.map((menu, index) => {
+  const menuItems = menuData?.menuItems?.nodes?.map((menu, index) => {
     return (
       <VStack align="stretch" key={`headerMenu${index}`}>
         <Link href={menu.path} isExternal={!!menu.target}>

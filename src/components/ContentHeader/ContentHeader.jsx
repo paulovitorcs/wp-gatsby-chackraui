@@ -10,6 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useWpBasicInfo } from "../../static-queries/wp";
 
 const ContentHeader = (props) => {
   const {
@@ -21,7 +22,8 @@ const ContentHeader = (props) => {
     containerSize,
     featuredImageStyle,
   } = props;
-  const formatedDate = moment(date).format("DD/MM/YYYY");
+  const wpInfo = useWpBasicInfo();
+  const formatedDate = moment(date).format(wpInfo.generalSettings.dateFormat);
 
   const imageDisplay = (isPage) => featuredImage ? (
     <Image

@@ -6,14 +6,14 @@ import { useWpBasicInfo } from "../../static-queries/wp";
 import { Link } from "gatsby";
 
 const Header = () => {
-  const { title } = useWpBasicInfo();
+  const wpInfo = useWpBasicInfo();
 
   return (
     <StyledHeader>
       <Container maxW="7xl">
         <Flex align="center" justify="space-between">
           <Link to="/">
-            <Heading>{title}</Heading>
+            <Heading>{wpInfo.generalSettings.title}</Heading>
           </Link>
           <HeaderMenu></HeaderMenu>
         </Flex>

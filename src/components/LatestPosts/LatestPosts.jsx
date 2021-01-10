@@ -26,9 +26,9 @@ const LatestPosts = () => {
       </Heading>
       <VStack spacing="20px">{postsList}</VStack>
       <HStack w="100%" justify="center" mt="4">
-        <Button>
-          <Link to="/blog">See All Posts</Link>
-        </Button>
+        <Link to="/blog">
+          <Button>See All Posts</Button>
+        </Link>
       </HStack>
     </Wrap>
   );

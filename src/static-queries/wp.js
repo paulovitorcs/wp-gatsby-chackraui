@@ -8,11 +8,16 @@ export const useWpBasicInfo = () => {
           generalSettings {
             title
             description
+            language
+            dateFormat
+          }
+          readingSettings {
+            postsPerPage
           }
         }
       }
     `
   );
 
-  return data?.wp?.generalSettings;
+  return data?.wp;
 };

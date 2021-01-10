@@ -11,11 +11,13 @@ import ContentHeader from "../../components/ContentHeader";
 import Layout from "../../components/Layout";
 import PostItem from "../../components/PostItem/PostItem";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { useWpBasicInfo } from "../../static-queries/wp";
 
 const ArchivePost = (props) => {
   const { pageContext } = props;
+  const wpInfo = useWpBasicInfo();
   const posts = pageContext?.data?.allWpPost?.nodes;
-  const postsPerPage = 3;
+  const postsPerPage = wpInfo.readingSettings.postsPerPage;
   const [postsCount, setPostsCount] = useState(postsPerPage);
   const [postsToShow, setPostsToShow] = useState([]);
   let postsList = [];
