@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: ".env",
+});
+
 module.exports = {
   siteMetadata: {
     title: "WP Gatsby Chackra Boilerplate",
@@ -6,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress-experimental",
       options: {
-        url: "http://wp.paulovitorcs.com/wp/graphql",
+        url: process.env.WP_URL,
       },
     },
     "gatsby-plugin-styled-components",
