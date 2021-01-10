@@ -14,6 +14,7 @@ const PostContent = (props) => {
         author={author?.node?.name}
         date={date}
         featuredImage={featuredImage}
+        featuredImageStyle="post"
       />
       <Container className="wysiwyg-content">
         {ReactHtmlParser(content)}

@@ -14,6 +14,7 @@ const PageContent = (props) => {
         featuredImage={featuredImage}
         titleAlign={textAlign}
         containerSize={containerSize}
+        featuredImageStyle="page"
       />
       <Container maxW={containerSize}>
         <Box className="wysiwyg-content" style={{ textAlign: textAlign }}>{ReactHtmlParser(content)}</Box>

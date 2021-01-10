@@ -12,17 +12,31 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContentHeader = (props) => {
-  const { title, author, date, featuredImage, titleAlign, containerSize } = props;
+  const {
+    title,
+    author,
+    date,
+    featuredImage,
+    titleAlign,
+    containerSize,
+    featuredImageStyle,
+  } = props;
   const formatedDate = moment(date).format("DD/MM/YYYY");
 
-  const imageDisplay = featuredImage ? (
+  const imageDisplay = (isPage) => featuredImage ? (
     <Image
       mb="4"
+      mt={isPage ? "-40px" : null}
+      height={isPage ? "30vh" : null}
+      width="100%"
       objectFit="cover"
       src={featuredImage.node.sourceUrl}
       alt={featuredImage.node.altText}
     />
   ) : null;
+
+  const pageImageDisplay = featuredImageStyle == "page" ? imageDisplay(true) : null;
+  const postImageDisplay = featuredImageStyle == "post" ? imageDisplay(false) : null;
 
   const authorDisplay = author ? (
     <Flex align="center">
@@ -43,16 +57,19 @@ const ContentHeader = (props) => {
   ) : null;
 
   return (
-    <Container maxW={containerSize}>
-      <HStack mb="2" spacing="10" justify="center">
-        {authorDisplay}
-        {dateDisplay}
-      </HStack>
-      <Heading mb="10" size="4xl" style={{ textAlign: titleAlign }}>
-        {title}
-      </Heading>
-      {imageDisplay}
-    </Container>
+    <>
+      {pageImageDisplay}
+      <Container maxW={containerSize}>
+        <HStack mb="2" spacing="10" justify="center">
+          {authorDisplay}
+          {dateDisplay}
+        </HStack>
+        <Heading mb="10" size="4xl" style={{ textAlign: titleAlign }}>
+          {title}
+        </Heading>
+        {postImageDisplay}
+      </Container>
+    </>
   );
 };
 
@@ -63,11 +80,13 @@ ContentHeader.propTypes = {
   featuredImage: PropTypes.object,
   titleAlign: PropTypes.oneOf(["center", "left", "right"]),
   containerSize: PropTypes.string,
+  featuredImageStyle: PropTypes.oneOf(["post", "page"]),
 };
 
 ContentHeader.defaultProps = {
   titleAlign: "center",
-  containerSize: "5xl"
+  containerSize: "5xl",
+  featuredImageStyle: "post",
 };
 
 export default ContentHeader;
