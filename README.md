@@ -6,19 +6,21 @@
 </p>
 
 ## ⚙️ Installation
+1. **Check your `.env` file**
+- You will need to set up `WP_URL` variable to work properly
 
-1.  **Install on your local machine**
+2.  **Install on your local machine**
 
     ```shell
     yarn install
     ```
 
-2.  **Start developing.**
+3.  **Start developing.**
 
     ```shell
     gatsby develop
     ```
 
-3.  **Open the code and start customizing!**
+4.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000!
