@@ -13,6 +13,8 @@ const Home = () => {
       <PageContent
         title={frontPageData.title}
         content={frontPageData.content}
+        containerSize="xl"
+        textAlign="center"
       />
       <Container>
         <Divider my="5" />

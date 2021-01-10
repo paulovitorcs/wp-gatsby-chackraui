@@ -1,14 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
 import moment from "moment";
-import { Container, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Heading,
+  HStack,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContentHeader = (props) => {
-  const { title, author, date, featuredImage } = props;
+  const { title, author, date, featuredImage, titleAlign, containerSize } = props;
   const formatedDate = moment(date).format("DD/MM/YYYY");
 
-  const imageDisplay = featuredImage ? <Image mb="4" objectFit="cover" src={featuredImage.node.sourceUrl} alt={featuredImage.node.altText} /> : null;
+  const imageDisplay = featuredImage ? (
+    <Image
+      mb="4"
+      objectFit="cover"
+      src={featuredImage.node.sourceUrl}
+      alt={featuredImage.node.altText}
+    />
+  ) : null;
 
   const authorDisplay = author ? (
     <Flex align="center">
@@ -29,12 +43,12 @@ const ContentHeader = (props) => {
   ) : null;
 
   return (
-    <Container maxW="5xl">
+    <Container maxW={containerSize}>
       <HStack mb="2" spacing="10" justify="center">
         {authorDisplay}
         {dateDisplay}
       </HStack>
-      <Heading mb="10" size="4xl" style={{ textAlign: "center" }}>
+      <Heading mb="10" size="4xl" style={{ textAlign: titleAlign }}>
         {title}
       </Heading>
       {imageDisplay}
@@ -47,6 +61,13 @@ ContentHeader.propTypes = {
   author: PropTypes.string,
   date: PropTypes.string,
   featuredImage: PropTypes.object,
+  titleAlign: PropTypes.oneOf(["center", "left", "right"]),
+  containerSize: PropTypes.string,
+};
+
+ContentHeader.defaultProps = {
+  titleAlign: "center",
+  containerSize: "5xl"
 };
 
 export default ContentHeader;

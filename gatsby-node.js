@@ -25,4 +25,16 @@ exports.createPages = async ({ graphql, actions }) => {
     component: require.resolve("./src/pages/ArchivePost"),
     context: allPostsData
   });
+
+  // Single Page
+  const { ALL_PAGES } = require("./src/queries/all-pages");
+  const allPagesData = await graphql(ALL_PAGES);
+
+  allPagesData.data.allWpPage.nodes.forEach((page) => {
+    createPage({
+      path: `/${page.slug}`,
+      component: require.resolve("./src/pages/SinglePage"),
+      context: page,
+    });
+  });
 };
