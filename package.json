@@ -41,6 +41,7 @@
     "react-google-font-loader": "^1.1.0",
     "react-helmet": "^6.1.0",
     "react-html-parser": "^2.0.2",
+    "react-responsive-masonry": "^2.1.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

@@ -17,6 +17,7 @@ const ALL_POSTS = `
           }
         }
         content
+        excerpt
       }
     }
   }

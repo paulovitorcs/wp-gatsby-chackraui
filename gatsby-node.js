@@ -18,4 +18,11 @@ exports.createPages = async ({ graphql, actions }) => {
       context: post,
     });
   });
+
+  //Archive Post
+  createPage({
+    path: "/blog",
+    component: require.resolve("./src/pages/ArchivePost"),
+    context: allPostsData
+  });
 };

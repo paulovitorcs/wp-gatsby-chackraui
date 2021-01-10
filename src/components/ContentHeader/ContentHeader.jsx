@@ -8,7 +8,7 @@ const ContentHeader = (props) => {
   const { title, author, date, featuredImage } = props;
   const formatedDate = moment(date).format("DD/MM/YYYY");
 
-  const imageDisplay = featuredImage ? <Image my="10" objectFit="cover" src={featuredImage.node.sourceUrl} alt={featuredImage.node.altText} /> : null;
+  const imageDisplay = featuredImage ? <Image mb="4" objectFit="cover" src={featuredImage.node.sourceUrl} alt={featuredImage.node.altText} /> : null;
 
   const authorDisplay = author ? (
     <Flex align="center">
@@ -34,7 +34,7 @@ const ContentHeader = (props) => {
         {authorDisplay}
         {dateDisplay}
       </HStack>
-      <Heading size="4xl" style={{ textAlign: "center" }}>
+      <Heading mb="10" size="4xl" style={{ textAlign: "center" }}>
         {title}
       </Heading>
       {imageDisplay}

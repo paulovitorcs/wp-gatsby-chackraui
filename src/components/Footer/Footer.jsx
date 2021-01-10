@@ -4,7 +4,7 @@ import { Container, Divider, Text } from "@chakra-ui/react";
 const Footer = () => {
   return (
     <footer>
-      <Container maxW="8xl" my="5" centerContent>
+      <Container maxW="7xl" my="5" centerContent>
         <Divider mb="3"></Divider>
         <Text fontSize="md">
           Developed by{" "}
