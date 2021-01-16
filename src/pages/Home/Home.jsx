@@ -8,14 +8,18 @@ import { useWpFrontPage } from "../../static-queries/page";
 const Home = () => {
   const frontPageData = useWpFrontPage();
 
+  const frontPageDisplay = frontPageData ? (
+    <PageContent
+      title={frontPageData.title}
+      content={frontPageData.content}
+      containerSize="xl"
+      textAlign="center"
+    />
+  ) : null;
+
   return (
     <Layout>
-      <PageContent
-        title={frontPageData.title}
-        content={frontPageData.content}
-        containerSize="xl"
-        textAlign="center"
-      />
+      {frontPageDisplay}
       <Container>
         <Divider my="5" />
         <LatestPosts />

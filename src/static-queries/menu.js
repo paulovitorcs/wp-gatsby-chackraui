@@ -4,7 +4,7 @@ export const useWpMenu = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        wpMenu(locations: {eq: GATSBY_HEADER_MENU}) {
+        wpMenu(name: {eq: "Menu"}) {
           menuItems {
             nodes {
               label
